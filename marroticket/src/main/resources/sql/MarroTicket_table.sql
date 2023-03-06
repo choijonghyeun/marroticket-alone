@@ -90,12 +90,11 @@ CREATE TABLE play (
     p_startdate            DATE NOT NULL, --연극 시작일
     p_closedate            DATE NOT NULL, --연극 종료일
     p_runningtime          VARCHAR2(3) NOT NULL, --연극 소요시간(러닝타임)
-    p_theatername          VARCHAR2(20) NOT NULL, --극장 이름
+    p_theatername          VARCHAR2(50) NOT NULL, --극장 이름
     p_theateraddress       VARCHAR2(100) NOT NULL, --극장 주소
-    p_agency               VARCHAR2(20) NOT NULL, --기획사 정보
+    p_agency               VARCHAR2(50) NOT NULL, --기획사 정보
     p_ratings              VARCHAR2(1) NOT NULL, --관람 등급
-    p_casting              VARCHAR2(2000) NOT NULL, --캐스팅 데이터
-    p_ticketopendate       DATE NOT NULL, --예매 오픈 희망일
+    p_casting              VARCHAR2(4000) NOT NULL, --캐스팅 데이터
     p_plot                 VARCHAR2(4000) NOT NULL, --공연 줄거리
     p_seatnumber           NUMBER(20) NOT NULL, --좌석 개수
     p_ticketprice          NUMBER(7) NOT NULL, --티켓 가격
@@ -217,3 +216,6 @@ ALTER SEQUENCE play_seq NOCACHE;
 ALTER SEQUENCE reservation_seq NOCACHE;
 ALTER SEQUENCE tmember_seq NOCACHE;
 ALTER SEQUENCE umember_seq NOCACHE;
+
+
+
